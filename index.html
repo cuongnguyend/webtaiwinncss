@@ -11,27 +11,45 @@
 
 <body>
     <nav class="w-full top-0 px-3 py-4 flex flex-row justify-between item-center z-50 absolute ">
-        <div class="container flex flex-wrap item-center justify-between mx-auto px-4">
-            <div class="flex flex-row font-medium font-cursive text-gray-300 text-gray-500 ">
-                <div class="pr-5 text-white"><a href="#">TAILWIN STARTED KIT</a></div>
+        <div class="container flex flex-wrap item-center justify-between mx-auto px-4 ">
+            <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                <a href="#"
+                    class="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase">TAILWIN
+                    STARTED KIT</a>
+                <button
+                    class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                    type="button" onclick="myfunction()"><i class="text-white fas fa-bars"></i>
+                </button>
             </div>
-            <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden">
-                <ul class="mr-auto flex flex-col lg:flex-row list-none ml-3">
-                    <li class=""><a href="# " class="text-white">
-                            <i class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"></i>
-                            DOCS</a>
-                    </li>
+            <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none block rounded shadow-lg"
+                id="menu_responsive">
+                <ul class="flex flex-col lg:flex-row list-none mr-auto">
+                    <li class="flex items-center"><a
+                            class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                            href="/learning-lab/tailwind-starter-kit/documentation/landing"><i
+                                class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"></i>
+                            Docs</a></li>
                 </ul>
-                <ul class="lg:ml-auto flex flex-col lg:flex-row list-none  ">
-                    <li class="px-3 lg:text-white"><a href="#"><i class="fa fa-heart text-lg leading"></i></a> </li>
-                    <li class="px-3 lg:text-white"><a href="#"><i class="fab fa-twitter text-lg"></i></a></li>
-                    <li class="px-3 lg:text-white"><a href="#"><i class="fab fa-github text-lg"></i></a></li>
-                    <li class="px-3 item-center lg:text-white">
-                        <a href="#" class="download-button bg-gray-300 text-black font-bold p-3 rounded text-xs">
-                            <i class="fas fa-arrow-alt-circle-down "></i>
-                            DOWNLOAD
-                        </a>
-                    </li>
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <li class="flex items-center"><a
+                            class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                            href="#pablo"><i
+                                class="lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg "></i><span
+                                class="lg:hidden inline-block ml-2">Share</span></a></li>
+                    <li class="flex items-center"><a
+                            class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                            href="#pablo"><i
+                                class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "></i><span
+                                class="lg:hidden inline-block ml-2">Tweet</span></a></li>
+                    <li class="flex items-center"><a
+                            class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                            href="#pablo"><i
+                                class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "></i><span
+                                class="lg:hidden inline-block ml-2">Star</span></a></li>
+                    <li class="flex items-center"><a
+                            class="download-button bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            href="/learning-lab/tailwind-starter-kit/documentation/download"><i
+                                class="fas fa-arrow-alt-circle-down"></i> Download</a></li>
                 </ul>
             </div>
         </div>
@@ -108,7 +126,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap lg:flex-no-wrap xl:flex-no-wrap mt-30 items-center">
-                    
+
                     <div class="w-full mr-auto ml-auto px-4 md:w-5/12 mt-5">
                         <div
                             class=" inline-flex bg-white w-16 h-16 rounded-full text-center justify-center p-5 mb-6 shadow-lg text-gray-600">
@@ -447,5 +465,13 @@
         </div>
     </footer>
 </body>
+<script>
+    function myfunction() {
+        if (document.getElementById("menu_responsive").style.display == "none")
+            document.getElementById("menu_responsive").style.display = "block";
+        else
+            document.getElementById("menu_responsive").style.display = "none";
+    }
+</script>
 
 </html>
